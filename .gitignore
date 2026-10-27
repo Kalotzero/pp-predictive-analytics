@@ -1,0 +1,16 @@
+# secrets and local data - never commit
+.env
+*.env
+!.env.example
+work/
+out/
+cache/
+logs/
+*.csv
+*.json
+state.json
+pp_client.lock
+__pycache__/
+*.pyc
+venv/
+.venv/
