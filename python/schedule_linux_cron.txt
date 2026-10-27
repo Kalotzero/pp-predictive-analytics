@@ -1,0 +1,5 @@
+# crontab -e   (run as the service account that owns the folder)
+# delta every 30 minutes
+*/30 * * * * cd /opt/pp && /opt/pp/venv/bin/python pp_client.py delta >> /opt/pp/work/cron.log 2>&1
+# nightly at 02:00
+0 2 * * *    cd /opt/pp && /opt/pp/venv/bin/python pp_client.py nightly >> /opt/pp/work/cron.log 2>&1
